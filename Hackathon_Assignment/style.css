@@ -1,0 +1,305 @@
+/*mobile version*/
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  color: #302718;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: white;
+}
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 600px 5fr 150px;
+  grid-template-areas:
+    "header"
+    "banner"
+    "main"
+    "footer";
+}
+/*header*/
+header {
+  background-color: #699e3c;
+  grid-area: header;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #c7ab59;
+}
+
+.logo {
+  text-align: center;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+.menu li {
+  margin: 10px;
+  text-align: center;
+}
+/*banner*/
+.banner {
+  grid-area: banner;
+  background-image: url(banner.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+/*main*/
+main {
+  background-color: white;
+  grid-area: main;
+  margin: 0 10px;
+}
+
+/*About section*/
+.container_about {
+  text-align: center;
+  margin: 30px 20px 50px;
+}
+.container_about h3 {
+  border-bottom: 2px solid black;
+  color: #302718;
+}
+
+/*Reservations current pups*/
+.container_reservations {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c7ab59;
+  margin: 0;
+}
+.container_reservations h3 {
+  padding: 30px;
+  margin-bottom: 0;
+}
+.nestjes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c7ab59;
+  list-style: none;
+}
+.nestjes img {
+  border-radius: 50%;
+  border: 4px solid #699e3c;
+}
+
+.container_reservations button {
+  text-align: center;
+  margin: 20px;
+  margin-left: 50px;
+  padding: 10px;
+  background-color: #699e3c;
+  border: none;
+  border-radius: 20%;
+  color: white;
+}
+/*Photogallery section past pups*/
+.picture_gallery {
+  text-align: center;
+  padding-bottom: 20px;
+  color: black;
+}
+.picture_gallery h3 {
+  color: #302718;
+}
+.container_pictures {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 1px;
+}
+.container_pictures li {
+  list-style: none;
+  margin: 5px;
+}
+
+/*Guestbook section with reviews*/
+.guestbook {
+  text-align: center;
+  padding: 0 10px 40px;
+  color: white;
+}
+.guestbook h3 {
+  color: #302718;
+  border-bottom: 2px solid #302718;
+  margin-bottom: 40px;
+}
+.container_reviews img {
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.container_reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 20px;
+}
+.review {
+  background-color: #c7ab59;
+  border-radius: 20%;
+  padding: 5px;
+}
+.container_reviews h5 {
+  margin-bottom: 0;
+}
+
+/*footer*/
+footer {
+  background-color: #699e3c;
+  grid-area: footer;
+  text-align: center;
+}
+.social_media {
+  display: block;
+  text-align: center;
+  list-style: none;
+}
+.social_media li {
+  display: inline;
+  margin: 5px;
+}
+footer h5 {
+  margin-left: 50px;
+}
+
+/*Tablet version**************************************************************/
+@media (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+  .logo {
+    text-align: start;
+    margin: 20px;
+  }
+  .menu {
+    justify-content: flex-end;
+  }
+  /*About section*/
+  .container_about {
+    text-align: center;
+  }
+  .container_about p {
+    padding: 5px 100px;
+  }
+  /*current pup reservations*/
+  .container_reservations {
+    margin: 0;
+  }
+  .nestjes {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 40px;
+  }
+  /*picture gallery*/
+  .container_pictures {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    margin: 20px;
+  }
+  .picture_gallery {
+    margin: 0 100px;
+  }
+  .picture_gallery p {
+    padding: 2px 100px;
+  }
+  /*guestbook*/
+  .container_reviews {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 700px;
+  }
+}
+
+/*desktop**************************************************************************/
+@media (min-width: 1024px) {
+  body {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  /*header*/
+  .logo {
+    text-align: start;
+    margin: 20px;
+  }
+  .menu {
+    justify-content: flex-end;
+    margin:0 10px;
+  }
+  /*banner*/
+  .banner {
+    background-position: top;
+  }
+  /*About section*/
+  .container_about {
+    text-align: center;
+  }
+  .container_about p {
+    padding: 10px 200px;
+  }
+  /*current pup reservations*/
+  .container_reservations {
+    margin: 0;
+  }
+  .nestjes {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 40px;
+  }
+  .picture_zoom {
+    width: 300px;
+    height: 250px;
+  }
+  /*picture gallery*/
+  .container_pictures {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    margin: 20px;
+  }
+  .picture_gallery {
+    margin: 0 100px;
+  }
+  .picture_gallery p {
+    padding: 5px 300px;
+  }
+  /*guestbook section*/
+  .container_reviews {
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 3fr;
+    justify-content: space-evenly;
+    column-gap: 20px;
+    line-height: normal;
+    font-size: medium;
+  }
+  .guestbook {
+    margin: 0 100px 100px;
+  }
+  .guestbook h3 {
+    margin-bottom: 70px;
+  }
+}

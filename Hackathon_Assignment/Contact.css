@@ -1,0 +1,206 @@
+/* Contact pagina*/
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  color: #302718;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #c7ab59;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 4fr 1fr;
+  grid-template-areas:
+    "header"
+    "Waitingform"
+    "footer";
+}
+/*header*/
+header {
+  grid-area: header;
+  background-color: #699e3c;
+}
+.logo {
+  text-align: center;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+.menu li {
+  margin: 10px;
+  text-align: center;
+}
+/*main*/
+main {
+  margin: 0 20px;
+}
+main h2 {
+  color: #302718;
+  text-align: center;
+  border-bottom: 2px solid #302718;
+}
+/*waiting list*/
+.container_waitingform {
+  grid-area: Waitingform;
+  background-color: white;
+  color: #302718;
+  padding: 20px;
+}
+.container_waitingform h2,
+p {
+  text-align: center;
+  color: #302718;
+}
+.container_waitingform h2 {
+  border-bottom: 2px solid grey;
+  color: #302718;
+}
+form {
+  text-align: start;
+}
+form label {
+  margin: 2px;
+  margin-left: 20px;
+  margin-right: 2px;
+}
+input {
+  margin: 5px;
+}
+input[type="text"],
+[type="name"],
+[type="tel"],
+[type="email"] {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid grey;
+  background-color: white;
+}
+.dog_sex {
+  text-align: start;
+  margin-left: 20px;
+}
+.dog_sex h4 {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #302718;
+}
+.fur_color {
+  text-align: start;
+  margin-left: 20px;
+}
+.fur_color h4 {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #302718;
+}
+
+.personal_info {
+  text-align: start;
+  margin: 20px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.personal_info h4 {
+  margin-bottom: 10px;
+  color: #302718;
+}
+.motivatie {
+  text-align: start;
+  margin: 20px;
+  margin-top: 2px;
+}
+.motivatie h4 {
+  margin-bottom: 10px;
+  color: #302718;
+}
+button {
+  margin: 30px;
+  padding: 10px;
+  background-color: #c7ab59;
+  color: white;
+  border: #c7ab59;
+  border-radius: 20%;
+}
+
+/*footer*/
+footer {
+  background-color: #699e3c;
+  grid-area: footer;
+  text-align: center;
+}
+.social_media {
+  display: block;
+  text-align: center;
+  list-style: none;
+}
+.social_media li {
+  display: inline;
+  margin: 5px;
+}
+footer h5 {
+  margin-left: 25px;
+}
+
+/*tablet version*********************************************/
+@media (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+  .logo {
+    text-align: start;
+    margin: 20px;
+  }
+  .menu {
+    justify-content: flex-end;
+  }
+  input[type="text"],
+  [type="name"],
+  [type="tel"],
+  [type="email"] {
+    width: 25%;
+  }
+}
+
+/*desktop version*************************************************/
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  input[type="text"],
+  [type="name"],
+  [type="tel"],
+  [type="email"] {
+    width: 25%;
+  }
+  .logo {
+    text-align: start;
+    margin: 20px;
+  }
+  .menu {
+    justify-content: flex-end;
+    margin: 0 10px;
+  }
+}
